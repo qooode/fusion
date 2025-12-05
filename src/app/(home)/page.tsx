@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
 
 const slides = [
   {
@@ -79,18 +78,6 @@ const faqs = [
 ];
 
 export default function HomePage() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const slide = slides[currentSlide];
-
   return (
     <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
@@ -119,88 +106,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Slideshow */}
+      {/* Carousel */}
       <section
-        aria-label="Lazy fox screenshots slideshow"
+        aria-label="Lazy fox screenshots carousel"
         className="space-y-6"
       >
-        <div className="flex flex-col items-center gap-4">
-          <div className="relative w-full max-w-4xl mx-auto">
-            <div className="relative h-52 md:h-64">
-              {slides.map((item, index) => {
-                const total = slides.length;
-                const offset = (index - currentSlide + total) % total;
-
-                if (offset !== 0 && offset !== 1 && offset !== total - 1) {
-                  return null;
-                }
-
-                let positionClasses =
-                  'absolute inset-y-0 flex items-center justify-center transition-all duration-300 ease-out';
-
-                if (offset === 0) {
-                  positionClasses +=
-                    ' left-1/2 w-[72%] md:w-[64%] -translate-x-1/2 z-20';
-                } else if (offset === 1) {
-                  positionClasses +=
-                    ' right-0 inset-y-4 w-[40%] md:w-[36%] translate-x-1/4 z-10 opacity-80 scale-95';
-                } else if (offset === total - 1) {
-                  positionClasses +=
-                    ' left-0 inset-y-4 w-[40%] md:w-[36%] -translate-x-1/4 z-10 opacity-80 scale-95';
-                }
-
-                return (
-                  <div key={item.id} className={positionClasses}>
-                    <div className="h-full w-full">
-                      <div className="aspect-[16/9] w-full rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
-                        <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
-                          <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
-                            Slide {index + 1} · {item.title}
-                          </p>
-                          <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
-                            {item.caption}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+        <div className="relative w-full max-w-4xl mx-auto overflow-hidden">
+          <div className="lazy-fox-carousel flex w-max gap-4 py-2">
+            {[...slides, ...slides].map((item, index) => (
+              <div key={`${item.id}-${index}`} className="shrink-0">
+                <div className="aspect-[16/9] w-64 md:w-72 rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
+                  <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
+                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
+                      Slide {item.id} · {item.title}
+                    </p>
+                    <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
+                      {item.caption}
+                    </p>
                   </div>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="flex w-full max-w-4xl items-center justify-between gap-4">
-            <button
-              type="button"
-              onClick={prevSlide}
-              className="inline-flex items-center justify-center rounded-full border px-3 py-1.5 text-xs font-medium text-foreground bg-background hover:bg-accent hover:text-accent-foreground transition"
-            >
-              Previous
-            </button>
-
-            <div className="flex items-center gap-2">
-              {slides.map((item, index) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => setCurrentSlide(index)}
-                  aria-label={`Go to slide ${index + 1}`}
-                  className={`h-1.5 rounded-full transition ${
-                    index === currentSlide
-                      ? 'w-8 bg-foreground'
-                      : 'w-4 bg-border'
-                  }`}
-                />
-              ))}
-            </div>
-
-            <button
-              type="button"
-              onClick={nextSlide}
-              className="inline-flex items-center justify-center rounded-full border px-3 py-1.5 text-xs font-medium text-foreground bg-background hover:bg-accent hover:text-accent-foreground transition"
-            >
-              Next
-            </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

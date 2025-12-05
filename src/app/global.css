@@ -1,3 +1,16 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+@keyframes lazy-fox-carousel-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.lazy-fox-carousel {
+  animation: lazy-fox-carousel-scroll 30s linear infinite;
+}
