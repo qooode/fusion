@@ -147,9 +147,15 @@ export default function HomePage() {
           <div className="pt-2">
             <Link
               href="/docs"
-              className="inline-flex items-center rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background shadow-sm transition hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm transition hover:bg-slate-100"
             >
-              Request TestFlight Access
+              <span
+                aria-hidden="true"
+                className="text-lg leading-none text-black"
+              >
+                
+              </span>
+              <span>Request TestFlight Access</span>
             </Link>
           </div>
         </div>
