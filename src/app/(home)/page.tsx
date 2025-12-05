@@ -92,40 +92,26 @@ export default function HomePage() {
   const slide = slides[currentSlide];
 
   return (
-    <div className="flex flex-col gap-16 py-10 md:py-16">
+    <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
-      <section className="flex flex-col items-center text-center gap-8">
-        <div className="w-full max-w-3xl">
-          <div className="aspect-[16/9] w-full rounded-3xl border bg-gradient-to-br from-slate-900/80 via-slate-800 to-slate-900/80 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
-            <div className="mx-auto max-w-xs text-center">
-              <p className="text-xs font-medium uppercase tracking-[0.2em] text-slate-200/80 dark:text-slate-100/80">
-                Image placeholder
-              </p>
-              <p className="mt-2 text-xs text-slate-300/80 dark:text-slate-100/70">
-                Drop a hero screenshot or illustration of your Fusion
-                documentation here.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div className="max-w-xl space-y-4">
-          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight">
+      <section className="relative -mx-4 sm:-mx-6 lg:-mx-10 -mt-4 overflow-hidden rounded-b-3xl border-b bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
+        <div className="mx-auto flex min-h-[260px] max-w-5xl flex-col items-center justify-center px-6 py-12 text-center md:py-16">
+          <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
-          <p className="text-base md:text-lg text-muted-foreground">
+          <p className="mt-3 text-base md:text-lg text-slate-200/90">
             Quick brown fox powers delightful docs for every curious team.
           </p>
-          <p className="text-sm md:text-base text-muted-foreground">
-            The quick brown fox keeps jumping over lazy documentation so you
-            do not have to. Build a calm, focused homepage that makes every
+          <p className="mt-4 max-w-2xl text-sm md:text-base text-slate-200/80">
+            The quick brown fox keeps jumping over lazy documentation so you do
+            not have to. Build a calm, focused homepage that makes every
             section feel intentional, friendly, and ready for your users.
           </p>
 
-          <div className="pt-2">
+          <div className="mt-6">
             <Link
               href="#request-testflight"
-              className="inline-flex items-center rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background shadow-sm transition hover:opacity-90"
+              className="inline-flex items-center rounded-full bg-slate-50 px-6 py-2.5 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-200"
             >
               Request TestFlight
             </Link>
@@ -228,7 +214,7 @@ export default function HomePage() {
 
       {/* 3x3 Features Grid */}
       <section className="space-y-6">
-        <div className="space-y-2 text-center">
+        <div className="space-y-2 text-center max-w-xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight">
             How the lazy fox helps
           </h2>
@@ -238,16 +224,16 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {featureGrid.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-2xl border bg-card/60 px-5 py-4 text-left space-y-2"
+              className="rounded-2xl border bg-card/60 px-4 py-3 text-left space-y-2"
             >
-              <h3 className="text-sm font-semibold tracking-tight">
+              <h3 className="text-sm font-semibold tracking-tight leading-snug">
                 {feature.title}
               </h3>
-              <p className="text-xs md:text-sm text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground leading-snug">
                 {feature.description}
               </p>
             </div>
@@ -266,17 +252,22 @@ export default function HomePage() {
 
         <div className="space-y-4 max-w-2xl mx-auto">
           {faqs.map((item) => (
-            <div
+            <details
               key={item.question}
-              className="rounded-2xl border bg-card/60 px-5 py-4 text-left space-y-2"
+              className="group rounded-2xl border bg-card/60 text-left"
             >
-              <h3 className="text-sm font-semibold tracking-tight">
-                {item.question}
-              </h3>
-              <p className="text-xs md:text-sm text-muted-foreground">
-                {item.answer}
-              </p>
-            </div>
+              <summary className="flex cursor-pointer items-center justify-between gap-3 px-5 py-4 text-sm font-semibold tracking-tight list-none [&::-webkit-details-marker]:hidden">
+                <span>{item.question}</span>
+                <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full border text-[10px] text-muted-foreground transition group-open:rotate-90">
+                  →
+                </span>
+              </summary>
+              <div className="px-5 pb-4">
+                <p className="text-xs md:text-sm text-muted-foreground">
+                  {item.answer}
+                </p>
+              </div>
+            </details>
           ))}
         </div>
       </section>
