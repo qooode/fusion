@@ -82,7 +82,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
       <section className="relative -mx-4 sm:-mx-6 lg:-mx-10 -mt-4 overflow-hidden rounded-b-3xl border-b bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
-        <div className="mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-center px-6 py-20 text-center md:py-24">
+        <div className="mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-end px-6 pt-16 pb-24 text-center md:pt-20 md:pb-32">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
@@ -98,9 +98,15 @@ export default function HomePage() {
           <div className="mt-6">
             <Link
               href="#request-testflight"
-              className="inline-flex items-center rounded-full bg-slate-50 px-6 py-2.5 text-sm font-medium text-slate-900 shadow-sm transition hover:bg-slate-200"
+              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm transition hover:bg-slate-100"
             >
-              Request TestFlight
+              <span
+                aria-hidden="true"
+                className="text-lg leading-none text-black"
+              >
+                
+              </span>
+              <span>Request TestFlight</span>
             </Link>
           </div>
         </div>
