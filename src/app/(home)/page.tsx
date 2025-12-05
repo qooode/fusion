@@ -82,7 +82,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
       <section className="relative -mx-4 sm:-mx-6 lg:-mx-10 -mt-4 overflow-hidden rounded-b-3xl border-b bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
-        <div className="mx-auto flex min-h-[480px] md:min-h-[640px] max-w-5xl flex-col items-center justify-center px-6 py-16 text-center md:py-20">
+        <div className="mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-center px-6 py-20 text-center md:py-24">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
@@ -157,16 +157,6 @@ export default function HomePage() {
 
       {/* 3x3 Features Grid */}
       <section className="space-y-6">
-        <div className="space-y-2 text-center max-w-xl mx-auto">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            How the lazy fox helps
-          </h2>
-          <p className="text-sm md:text-base text-muted-foreground">
-            Nine small, focused reasons your homepage feels better on
-            Fumadocs with a lazy fox pacing the edges.
-          </p>
-        </div>
-
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
           {featureGrid.map((feature) => (
             <div
