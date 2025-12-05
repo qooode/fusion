@@ -161,7 +161,7 @@ export default function HomePage() {
           {featureGrid.map((feature) => (
             <div
               key={feature.title}
-              className="rounded-2xl border bg-card/60 px-4 py-3 text-left space-y-2"
+              className="rounded-2xl bg-card/60 px-4 py-3 text-center space-y-2"
             >
               <h3 className="text-sm font-semibold tracking-tight leading-snug">
                 {feature.title}
