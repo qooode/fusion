@@ -215,6 +215,30 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="mt-10 border-t border-border pt-6">
+        <div className="flex flex-col gap-4 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+          <div className="space-y-1">
+            <div className="text-sm font-semibold text-foreground">
+              Fusion Lazy Fox
+            </div>
+            <p className="max-w-xs">
+              Lazy fox powered documentation
+              <br />
+              for curious teams everywhere
+            </p>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link href="#" className="hover:underline">
+              Terms of Use
+            </Link>
+            <Link href="#" className="hover:underline">
+              Privacy Policy
+            </Link>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
