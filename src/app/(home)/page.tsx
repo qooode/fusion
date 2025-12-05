@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="lazy-fox-carousel flex w-max gap-4 py-3">
             {[...slides, ...slides].map((item, index) => (
               <div key={`${item.id}-${index}`} className="shrink-0">
-                <div className="aspect-[16/9] w-80 md:w-96 rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
+                <div className="aspect-[16/9] w-96 md:w-[30rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
                   <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
                     <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
                       Slide {item.id} · {item.title}
