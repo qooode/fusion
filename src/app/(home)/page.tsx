@@ -106,7 +106,7 @@ export default function HomePage() {
               >
                 
               </span>
-              <span>Request TestFlight</span>
+              <span>Request Beta Access</span>
             </Link>
           </div>
         </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
               >
                 
               </span>
-              <span>Request TestFlight Access</span>
+              <span>Request Beta Access</span>
             </Link>
           </div>
         </div>
