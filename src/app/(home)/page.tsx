@@ -199,12 +199,12 @@ export default function HomePage() {
           {faqs.map((item) => (
             <details
               key={item.question}
-              className="group rounded-2xl border bg-card/60 text-left"
+              className="group rounded-2xl bg-slate-200/60 dark:bg-slate-800/60 text-left"
             >
               <summary className="flex cursor-pointer items-center justify-between gap-3 px-5 py-4 text-sm font-semibold tracking-tight list-none [&::-webkit-details-marker]:hidden">
                 <span>{item.question}</span>
-                <span className="ml-2 inline-flex h-5 w-5 items-center justify-center rounded-full border text-[10px] text-muted-foreground transition group-open:rotate-90">
-                  →
+                <span className="ml-2 inline-flex h-5 w-5 items-center justify-center text-xs font-semibold text-muted-foreground transition group-open:rotate-180">
+                  ⌄
                 </span>
               </summary>
               <div className="px-5 pb-4">
