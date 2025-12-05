@@ -116,7 +116,7 @@ export default function HomePage() {
       {/* Carousel */}
       <section
         aria-label="Lazy fox screenshots carousel"
-        className="space-y-6 -mx-4 sm:-mx-6 lg:-mx-10"
+        className="space-y-6"
       >
         <div className="relative w-full overflow-hidden">
           <div className="lazy-fox-carousel flex w-max gap-4 py-3">
