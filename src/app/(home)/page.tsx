@@ -82,7 +82,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
       <section className="relative -mx-4 sm:-mx-6 lg:-mx-10 -mt-4 overflow-hidden rounded-b-3xl border-b bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
-        <div className="mx-auto flex min-h-[340px] md:min-h-[440px] max-w-5xl flex-col items-center justify-center px-6 py-16 text-center md:py-20">
+        <div className="mx-auto flex min-h-[480px] md:min-h-[640px] max-w-5xl flex-col items-center justify-center px-6 py-16 text-center md:py-20">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
@@ -134,9 +134,9 @@ export default function HomePage() {
       {/* Secondary CTA */}
       <section
         id="request-testflight"
-        className="rounded-2xl border bg-muted/40 px-6 py-8 md:px-10 md:py-10 space-y-4 text-center md:text-left flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+        className="px-6 py-10 md:py-12 text-center"
       >
-        <div className="space-y-3 max-w-xl mx-auto md:mx-0">
+        <div className="space-y-4 max-w-xl mx-auto">
           <h2 className="text-2xl font-semibold tracking-tight">
             Start testing with the lazy fox
           </h2>
@@ -144,15 +144,14 @@ export default function HomePage() {
             Give early readers a calm place to explore Fusion documentation,
             collect feedback, and refine your story before you fully launch.
           </p>
-        </div>
-
-        <div className="flex justify-center md:justify-end">
-          <Link
-            href="/docs"
-            className="inline-flex items-center rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background shadow-sm transition hover:opacity-90"
-          >
-            Request TestFlight Access
-          </Link>
+          <div className="pt-2">
+            <Link
+              href="/docs"
+              className="inline-flex items-center rounded-full bg-foreground px-6 py-2.5 text-sm font-medium text-background shadow-sm transition hover:opacity-90"
+            >
+              Request TestFlight Access
+            </Link>
+          </div>
         </div>
       </section>
 
