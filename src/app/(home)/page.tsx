@@ -82,7 +82,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
       <section className="relative -mx-4 sm:-mx-6 lg:-mx-10 -mt-4 overflow-hidden rounded-b-3xl border-b bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
-        <div className="mx-auto flex min-h-[260px] max-w-5xl flex-col items-center justify-center px-6 py-12 text-center md:py-16">
+        <div className="mx-auto flex min-h-[340px] md:min-h-[440px] max-w-5xl flex-col items-center justify-center px-6 py-16 text-center md:py-20">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
@@ -115,7 +115,7 @@ export default function HomePage() {
           <div className="lazy-fox-carousel flex w-max gap-4 py-3">
             {[...slides, ...slides].map((item, index) => (
               <div key={`${item.id}-${index}`} className="shrink-0">
-                <div className="aspect-[16/9] w-96 md:w-[30rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
+                <div className="aspect-[16/9] w-[26rem] md:w-[38rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
                   <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
                     <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
                       Slide {item.id} · {item.title}
