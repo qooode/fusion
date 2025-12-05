@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { ChevronRight } from 'lucide-react';
 
 const slides = [
   {
@@ -187,7 +188,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="space-y-6 pb-4">
+      <section className="space-y-6 pt-8 md:pt-10 pb-4">
         <div className="space-y-2 text-center">
           <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
           <p className="text-sm md:text-base text-muted-foreground">
@@ -199,13 +200,11 @@ export default function HomePage() {
           {faqs.map((item) => (
             <details
               key={item.question}
-              className="group rounded-2xl bg-slate-200/60 dark:bg-slate-800/60 text-left"
+              className="group rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/50 text-left"
             >
               <summary className="flex cursor-pointer items-center justify-between gap-3 px-5 py-4 text-sm font-semibold tracking-tight list-none [&::-webkit-details-marker]:hidden">
                 <span>{item.question}</span>
-                <span className="ml-2 inline-flex h-5 w-5 items-center justify-center text-xs font-semibold text-muted-foreground transition group-open:rotate-180">
-                  ⌄
-                </span>
+                <ChevronRight className="ml-2 h-4 w-4 text-neutral-500 dark:text-neutral-400 transition-transform duration-200 group-open:rotate-90" />
               </summary>
               <div className="px-5 pb-4">
                 <p className="text-xs md:text-sm text-muted-foreground">
