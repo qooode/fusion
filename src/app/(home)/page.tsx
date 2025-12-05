@@ -118,107 +118,112 @@ export default function HomePage() {
         aria-label="Lazy fox screenshots carousel"
         className="space-y-6"
       >
-        <div className="relative w-full overflow-hidden">
-          <div className="lazy-fox-carousel flex w-max gap-4 py-3">
-            {[...slides, ...slides].map((item, index) => (
-              <div key={`${item.id}-${index}`} className="shrink-0">
-                <div className="aspect-[16/9] w-[26rem] md:w-[38rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
-                  <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
-                      Slide {item.id} · {item.title}
-                    </p>
-                    <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
-                      {item.caption}
-                    </p>
+        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+          <div className="relative w-full overflow-hidden">
+            <div className="lazy-fox-carousel flex w-max gap-4 py-3">
+              {[...slides, ...slides].map((item, index) => (
+                <div key={`${item.id}-${index}`} className="shrink-0">
+                  <div className="aspect-[16/9] w-[26rem] md:w-[38rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
+                    <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
+                      <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
+                        Slide {item.id} · {item.title}
+                      </p>
+                      <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
+                        {item.caption}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Secondary CTA */}
-      <section
-        id="request-testflight"
-        className="px-6 py-10 md:py-12 text-center"
-      >
-        <div className="space-y-4 max-w-xl mx-auto">
-          <h2 className="text-2xl font-semibold tracking-tight">
-            Start testing with the lazy fox
-          </h2>
-          <p className="text-sm md:text-base text-muted-foreground">
-            Give early readers a calm place to explore Fusion documentation,
-            collect feedback, and refine your story before you fully launch.
-          </p>
-          <div className="pt-2">
-            <Link
-              href="/docs"
-              className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm transition hover:bg-slate-100"
-            >
-              <span
-                aria-hidden="true"
-                className="text-lg leading-none text-black"
+      <section id="request-testflight" className="py-10 md:py-12">
+        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+          <div className="space-y-4 max-w-xl mx-auto text-center">
+            <h2 className="text-2xl font-semibold tracking-tight">
+              Start testing with the lazy fox
+            </h2>
+            <p className="text-sm md:text-base text-muted-foreground">
+              Give early readers a calm place to explore Fusion documentation,
+              collect feedback, and refine your story before you fully launch.
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/docs"
+                className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm transition hover:bg-slate-100"
               >
-                
-              </span>
-              <span>Request Beta Access</span>
-            </Link>
+                <span
+                  aria-hidden="true"
+                  className="text-lg leading-none text-black"
+                >
+                  
+                </span>
+                <span>Request Beta Access</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* 3x3 Features Grid */}
       <section className="space-y-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {featureGrid.map((feature) => (
-            <div
-              key={feature.title}
-              className="rounded-2xl bg-card/60 px-4 py-3 text-center space-y-2"
-            >
-              <h3 className="text-sm font-semibold tracking-tight leading-snug">
-                {feature.title}
-              </h3>
-              <p className="text-xs md:text-sm text-muted-foreground leading-snug">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            {featureGrid.map((feature) => (
+              <div
+                key={feature.title}
+                className="rounded-2xl bg-card/60 px-4 py-3 text-center space-y-2"
+              >
+                <h3 className="text-sm font-semibold tracking-tight leading-snug">
+                  {feature.title}
+                </h3>
+                <p className="text-xs md:text-sm text-muted-foreground leading-snug">
+                  {feature.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* FAQ */}
       <section className="space-y-6 pt-8 md:pt-10 pb-4">
-        <div className="space-y-2 text-center">
-          <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
-          <p className="text-sm md:text-base text-muted-foreground">
-            A few quick answers before your fox curls up and reads.
-          </p>
-        </div>
+        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+          <div className="space-y-2 text-center">
+            <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
+            <p className="text-sm md:text-base text-muted-foreground">
+              A few quick answers before your fox curls up and reads.
+            </p>
+          </div>
 
-        <div className="space-y-4 max-w-2xl mx-auto">
-          {faqs.map((item) => (
-            <details
-              key={item.question}
-              className="group rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/50 text-left"
-            >
-              <summary className="flex cursor-pointer items-center justify-between gap-3 px-5 py-4 text-sm font-semibold tracking-tight list-none [&::-webkit-details-marker]:hidden">
-                <span>{item.question}</span>
-                <ChevronRight className="ml-2 h-4 w-4 text-neutral-500 dark:text-neutral-400 transition-transform duration-200 group-open:rotate-90" />
-              </summary>
-              <div className="px-5 pb-4">
-                <p className="text-xs md:text-sm text-muted-foreground">
-                  {item.answer}
-                </p>
-              </div>
-            </details>
-          ))}
+          <div className="mt-4 space-y-4 max-w-2xl mx-auto">
+            {faqs.map((item) => (
+              <details
+                key={item.question}
+                className="group rounded-2xl bg-neutral-100/80 dark:bg-neutral-900/50 text-left"
+              >
+                <summary className="flex cursor-pointer items-center justify-between gap-3 px-5 py-4 text-sm font-semibold tracking-tight list-none [&::-webkit-details-marker]:hidden">
+                  <span>{item.question}</span>
+                  <ChevronRight className="ml-2 h-4 w-4 text-neutral-500 dark:text-neutral-400 transition-transform duration-200 group-open:rotate-90" />
+                </summary>
+                <div className="px-5 pb-4">
+                  <p className="text-xs md:text-sm text-muted-foreground">
+                    {item.answer}
+                  </p>
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="mt-10 border-t border-border pt-6">
-        <div className="flex flex-col gap-4 text-xs text-muted-foreground md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 text-xs text-muted-foreground sm:px-6 lg:px-10 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
             <div className="text-sm font-semibold text-foreground">
               Fusion Lazy Fox
