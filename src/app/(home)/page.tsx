@@ -82,7 +82,7 @@ export default function HomePage() {
     <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
       {/* Hero */}
       <section className="relative -mx-4 sm:-mx-6 lg:-mx-10 -mt-4 overflow-hidden rounded-b-3xl border-b bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
-        <div className="mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-end px-6 pt-16 pb-24 text-center md:pt-20 md:pb-32">
+        <div className="mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-end px-6 pt-16 pb-10 text-center md:pt-20 md:pb-14">
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
