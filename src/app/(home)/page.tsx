@@ -118,31 +118,29 @@ export default function HomePage() {
         aria-label="Lazy fox screenshots carousel"
         className="space-y-6"
       >
-        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
-          <div className="relative w-full overflow-hidden">
-            <div className="lazy-fox-carousel flex w-max gap-4 py-3">
-              {[...slides, ...slides].map((item, index) => (
-                <div key={`${item.id}-${index}`} className="shrink-0">
-                  <div className="aspect-[16/9] w-[26rem] md:w-[38rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
-                    <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
-                      <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
-                        Slide {item.id} · {item.title}
-                      </p>
-                      <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
-                        {item.caption}
-                      </p>
-                    </div>
+        <div className="relative w-full overflow-hidden">
+          <div className="lazy-fox-carousel flex w-max gap-4 py-3">
+            {[...slides, ...slides].map((item, index) => (
+              <div key={`${item.id}-${index}`} className="shrink-0">
+                <div className="aspect-[16/9] w-[26rem] md:w-[38rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
+                  <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
+                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
+                      Slide {item.id} · {item.title}
+                    </p>
+                    <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
+                      {item.caption}
+                    </p>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Secondary CTA */}
       <section id="request-testflight" className="py-10 md:py-12">
-        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10">
           <div className="space-y-4 max-w-xl mx-auto text-center">
             <h2 className="text-2xl font-semibold tracking-tight">
               Start testing with the lazy fox
@@ -171,7 +169,7 @@ export default function HomePage() {
 
       {/* 3x3 Features Grid */}
       <section className="space-y-6">
-        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10">
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {featureGrid.map((feature) => (
               <div
@@ -192,7 +190,7 @@ export default function HomePage() {
 
       {/* FAQ */}
       <section className="space-y-6 pt-8 md:pt-10 pb-4">
-        <div className="mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-10">
+        <div className="mx-auto w-full px-4 sm:px-6 lg:px-10">
           <div className="space-y-2 text-center">
             <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
             <p className="text-sm md:text-base text-muted-foreground">
@@ -223,7 +221,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="mt-10 border-t border-border pt-6">
-        <div className="mx-auto flex w-full max-w-5xl flex-col gap-4 px-4 text-xs text-muted-foreground sm:px-6 lg:px-10 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex w-full flex-col gap-4 px-4 text-xs text-muted-foreground sm:px-6 lg:px-10 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
             <div className="text-sm font-semibold text-foreground">
               Fusion Lazy Fox
