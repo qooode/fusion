@@ -83,7 +83,7 @@ const faqs = [
   {
     question: 'What are Extensions?',
     answer:
-      'Extensions are user installed connectors that provide additional catalogs, metadata, or subtitle sources. You install, configure, and manage them yourself within Fusion\'s settings.',
+      'Extensions are manifest based connectors capable of providing catalogs, metadata, subtitles, and resource URLs. Fusion functions only as a client for user installed extensions. You are solely responsible for ensuring that any extensions you install comply with applicable laws and terms of service.',
   },
   {
     question: 'How does iCloud sync work?',
