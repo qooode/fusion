@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 
 const slides = [
@@ -8,16 +9,19 @@ const slides = [
     id: 1,
     title: 'Overview',
     caption: 'The quick brown fox surveys your docs from above.',
+    image: '/1st image slideshow.jpg',
   },
   {
     id: 2,
     title: 'Collaboration',
     caption: 'Lazy fox workflows keep teams in sync without extra effort.',
+    image: '/2nd image slideshow.jpg',
   },
   {
     id: 3,
     title: 'Performance',
     caption: 'Fast, focused docs so your fox never needs to hurry.',
+    image: '/3rd image slideshow.jpg.jpg',
   },
 ];
 
@@ -80,10 +84,57 @@ const faqs = [
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-16 pt-0 pb-10 md:pb-16">
+    <div className="relative flex flex-col gap-16 pt-0 pb-10 md:pb-16">
+      {/* Bowl-shape ambient glow - spreads outward toward edges going up */}
+      <div
+        className="pointer-events-none absolute bottom-0 left-0 right-0 h-[600px]"
+        style={{
+          background: 'linear-gradient(to top, rgba(100, 100, 100, 0.35) 0%, rgba(100, 100, 100, 0.1) 50%, transparent 100%)',
+        }}
+      />
+      {/* Left side - angles outward / toward left edge */}
+      <div
+        className="pointer-events-none absolute bottom-0 left-0 w-full h-[1000px]"
+        style={{
+          background: 'linear-gradient(to top right, rgba(100, 100, 100, 0.25) 0%, rgba(100, 100, 100, 0.08) 25%, transparent 50%)',
+        }}
+      />
+      {/* Right side - angles outward \ toward right edge */}
+      <div
+        className="pointer-events-none absolute bottom-0 right-0 w-full h-[1000px]"
+        style={{
+          background: 'linear-gradient(to top left, rgba(100, 100, 100, 0.25) 0%, rgba(100, 100, 100, 0.08) 25%, transparent 50%)',
+        }}
+      />
+
       {/* Hero */}
-      <section className="relative -mt-4 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10">
-        <div className="mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-end px-6 pt-16 pb-10 text-center md:pt-20 md:pb-14">
+      <section className="relative -mt-4 overflow-hidden">
+        {/* Background Image */}
+        <Image
+          src="/fusion bg primary.jpg"
+          alt="Fusion hero background"
+          fill
+          priority
+          className="object-cover object-center"
+          quality={90}
+        />
+        {/* Dark overlay for text readability - fades to page bg color */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-[#121212]" />
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto flex min-h-[640px] md:min-h-[760px] max-w-5xl flex-col items-center justify-end px-6 pt-16 pb-10 text-center md:pt-20 md:pb-14">
+          {/* Fusion Logo Above Title */}
+          <div className="mb-6 w-[80px] sm:w-[100px] md:w-[120px]">
+            <Image
+              src="/FUSN_dark-iOS.png"
+              alt="Fusion logo"
+              width={120}
+              height={120}
+              className="w-full h-auto rounded-2xl"
+              priority
+            />
+          </div>
+
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
             Fusion Lazy Fox Docs
           </h1>
@@ -105,7 +156,7 @@ export default function HomePage() {
                 aria-hidden="true"
                 className="text-lg leading-none text-black"
               >
-                
+
               </span>
               <span>Request Beta Access</span>
             </Link>
@@ -122,15 +173,26 @@ export default function HomePage() {
           <div className="lazy-fox-carousel flex w-max gap-4 py-3">
             {[...slides, ...slides].map((item, index) => (
               <div key={`${item.id}-${index}`} className="shrink-0">
-                <div className="aspect-[16/9] w-[26rem] md:w-[38rem] rounded-2xl border bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 shadow-sm flex items-center justify-center">
-                  <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
-                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
-                      Slide {item.id} · {item.title}
-                    </p>
-                    <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
-                      {item.caption}
-                    </p>
-                  </div>
+                <div className="relative aspect-[16/9] w-[20rem] md:w-[28rem] rounded-2xl border overflow-hidden shadow-sm">
+                  {item.image ? (
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 dark:from-slate-100/10 dark:via-slate-100/5 dark:to-slate-100/10 flex items-center justify-center">
+                      <div className="px-4 text-center text-slate-100/90 dark:text-slate-50">
+                        <p className="text-[11px] font-medium uppercase tracking-[0.2em] opacity-80">
+                          Slide {item.id} · {item.title}
+                        </p>
+                        <p className="mt-2 text-xs md:text-sm max-w-xs mx-auto">
+                          {item.caption}
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

@@ -6,7 +6,7 @@ export function baseOptions(): BaseLayoutProps {
       enabled: false,
     },
     nav: {
-      title: 'My App',
+      title: 'Fusion',
     },
   };
 }
