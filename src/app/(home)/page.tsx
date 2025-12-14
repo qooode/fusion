@@ -237,7 +237,7 @@ export default function HomePage() {
               Join the Beta
             </h2>
             <p className="text-sm md:text-base text-muted-foreground">
-              Be among the first to experience Fusion. Request early access and help shape the future of content management on Apple devices.
+              Interested in trying Fusion? Request access to the TestFlight beta and explore the app while it's still in development.
             </p>
             <div className="pt-2">
               <a
