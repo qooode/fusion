@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
+import CookieSettingsButton from '@/components/CookieSettingsButton';
 
 const slides = [
   {
@@ -303,6 +304,7 @@ export default function HomePage() {
             <a href="https://github.com/qooode/fusion-app-privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Privacy Policy
             </a>
+            <CookieSettingsButton />
           </div>
         </div>
       </footer>
