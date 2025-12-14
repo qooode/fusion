@@ -10,12 +10,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Fusion - Discover, organize, and browse',
-  description: 'The elegant content manager for Apple. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.',
+  description: 'The elegant content manager for your Apple devices. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.',
   keywords: ['Fusion', 'content manager', 'Apple', 'iOS', 'macOS', 'tvOS', 'media browser', 'streaming', 'Trakt'],
   authors: [{ name: 'Fusion' }],
   openGraph: {
     title: 'Fusion - Discover, organize, and browse',
-    description: 'The elegant content manager for Apple. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.',
+    description: 'The elegant content manager for your Apple devices. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Fusion',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Fusion - Discover, organize, and browse',
-    description: 'The elegant content manager for Apple. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.',
+    description: 'The elegant content manager for your Apple devices. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.',
   },
 };
 

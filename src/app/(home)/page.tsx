@@ -69,7 +69,7 @@ const faqs = [
   {
     question: 'What is Fusion?',
     answer:
-      'Fusion is a content manager and browser for Apple devices. It provides a unified interface to discover, organize, and browse media information from your configured sources.',
+      'Fusion is a content manager and browser for your Apple devices. It provides a unified interface to discover, organize, and browse media information from your configured sources.',
   },
   {
     question: 'Does Fusion provide content?',
@@ -160,7 +160,7 @@ export default function HomePage() {
             Fusion
           </h1>
           <p className="mt-3 text-base md:text-lg text-slate-200/90 max-w-2xl">
-            The elegant content manager for Apple. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.
+            The elegant content manager for your Apple devices. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.
           </p>
 
           <div className="mt-6">
