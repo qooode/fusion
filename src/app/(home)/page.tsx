@@ -48,8 +48,8 @@ const featureGrid = [
     description: 'Enjoy your media your way. The native player supports subtitles, resume playback, and works beautifully across all platforms with external app handoff when you prefer.',
   },
   {
-    title: 'Designed for Apple',
-    description: 'Native, not ported. Built with SwiftUI for iOS, tvOS, and macOS. Feels right at home on every Apple device you own.',
+    title: 'Native Experience',
+    description: 'Native, not ported. Built with SwiftUI for iOS, tvOS, and macOS. Feels right at home on every device you own.',
   },
   {
     title: 'Trakt Integration',
@@ -218,7 +218,7 @@ export default function HomePage() {
               Join the Beta
             </h2>
             <p className="text-sm md:text-base text-muted-foreground">
-              Be among the first to experience Fusion. Get early access and help shape the future of content management on Apple devices.
+              Be among the first to experience Fusion. Request early access and help shape the future of content management on Apple devices.
             </p>
             <div className="pt-2">
               <a
@@ -285,7 +285,7 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="mt-10 border-t border-border pt-6">
+      <footer className="mt-10 border-t border-border pt-6 pb-6">
         <div className="mx-auto flex w-full flex-col gap-4 px-4 text-xs text-muted-foreground sm:px-6 lg:px-10 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
             <div className="text-sm font-semibold text-foreground">
@@ -305,6 +305,25 @@ export default function HomePage() {
               Privacy Policy
             </a>
             <CookieSettingsButton />
+            <details className="relative group" id="trademark-details">
+              <summary className="cursor-pointer hover:underline list-none">
+                Trademarks
+              </summary>
+              {/* Mobile: fixed bottom sheet, Desktop: floating popup */}
+              <div className="fixed md:absolute inset-x-4 bottom-4 md:inset-x-auto md:bottom-full md:right-0 md:mb-2 md:w-96 p-4 pt-8 rounded-xl bg-neutral-900 border border-neutral-700/50 shadow-xl text-[11px] text-muted-foreground leading-relaxed z-50">
+                <button
+                  onClick={() => {
+                    const details = document.getElementById('trademark-details') as HTMLDetailsElement;
+                    if (details) details.open = false;
+                  }}
+                  className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center rounded-md text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors"
+                  aria-label="Close"
+                >
+                  ✕
+                </button>
+                Apple, iPhone, iPad, Mac, Apple TV, macOS, iOS, tvOS, iCloud, SwiftUI, and TestFlight are trademarks of Apple Inc., registered in the U.S. and other countries. All other trademarks, service marks, product names, company names, logos, and brand names mentioned (including but not limited to Trakt, TMDB, Infuse, VLC, Plex, Jellyfin, Emby, and any third-party APIs, media players, or services) are the property of their respective owners. Fusion is an independent project not affiliated with, endorsed by, or sponsored by Apple Inc. or any of the aforementioned companies or services.
+              </div>
+            </details>
           </div>
         </div>
       </footer>
