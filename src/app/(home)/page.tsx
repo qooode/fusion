@@ -297,12 +297,12 @@ export default function HomePage() {
             </p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="#" className="hover:underline">
+            <a href="https://github.com/qooode/fusion-app-terms-of-service" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Terms of Use
-            </Link>
-            <Link href="#" className="hover:underline">
+            </a>
+            <a href="https://github.com/qooode/fusion-app-privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:underline">
               Privacy Policy
-            </Link>
+            </a>
           </div>
         </div>
       </footer>
