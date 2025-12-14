@@ -176,8 +176,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               aria-label="Join our Discord"
               title="Join our Discord"
-              className="inline-flex items-center justify-center w-12 h-12 rounded-xl transition hover:opacity-80"
-              style={{ backgroundColor: '#5865F2' }}
+              className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-neutral-800 border border-neutral-500/50 transition hover:bg-neutral-700"
             >
               <svg
                 width="24"
