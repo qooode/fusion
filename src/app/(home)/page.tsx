@@ -27,58 +27,78 @@ const slides = [
 
 const featureGrid = [
   {
-    title: 'Lazy fox foundations',
-    description: 'Compose every page on a solid Fumadocs-powered foundation.',
+    title: 'Unified Experience',
+    description: 'One interface for everything. Fusion brings your personal content collections into a beautifully designed home screen. Add what matters, hide what doesn\'t.',
   },
   {
-    title: 'Quick brown previews',
-    description: 'Preview changes instantly so the fox never waits around.',
+    title: 'Cross Device Sync',
+    description: 'Pick up where you left off. Your layout, preferences, and bookmarks seamlessly sync across all your Apple devices via iCloud. Configure once, access everywhere.',
   },
   {
-    title: 'Fox-friendly navigation',
-    description: 'Guide readers through dense docs with gentle, clear paths.',
+    title: 'Customizable Widgets',
+    description: 'Design your perfect dashboard. Add, remove, and rearrange content rows with our intuitive editor. Drag, drop, and make it yours in seconds.',
   },
   {
-    title: 'Typist-friendly MDX',
-    description: 'Write once in MDX and let the lazy fox present it.',
+    title: 'Powerful List Builder',
+    description: 'Curate with precision. Create smart collections filtered by genre, cast, release year, ratings, and more. Find exactly what you\'re looking for, instantly.',
   },
   {
-    title: 'Team-tailored layouts',
-    description: 'Shape your homepage to match how your crew really works.',
+    title: 'Built In Player',
+    description: 'Enjoy your media your way. The native player supports subtitles, resume playback, and works beautifully across all platforms with external app handoff when you prefer.',
   },
   {
-    title: 'Batteries-included search',
-    description: 'Help every curious fox find the exact answer in seconds.',
+    title: 'Designed for Apple',
+    description: 'Native, not ported. Built with SwiftUI for iOS, tvOS, and macOS. Feels right at home on every Apple device you own.',
   },
   {
-    title: 'Always in dark mode',
-    description: 'Let nocturnal foxes read comfortably long after sunset.',
+    title: 'Trakt Integration',
+    description: 'Keep your collections in sync. Connect Trakt to manage your personal watchlist, mark favorites, and maintain your browsing history across platforms.',
   },
   {
-    title: 'Ship-ready performance',
-    description: 'Lean, optimized pages that stay fast as your docs grow.',
+    title: 'Privacy Focused',
+    description: 'Your data stays on your devices. Fusion syncs via iCloud and processes everything locally. No user accounts required, no analytics, no data collection by us.',
   },
   {
-    title: 'Future-proof content',
-    description: 'Evolve structure without rewriting every lazy fox story.',
+    title: 'Extensible Architecture',
+    description: 'Your extensions, your choice. Add third party connectors for additional catalogs, subtitles, and metadata. Manage everything from one clean interface.',
   },
 ];
 
 const faqs = [
   {
-    question: 'What is the lazy fox homepage?',
+    question: 'What is Fusion?',
     answer:
-      'It is a Fumadocs-powered landing page that uses simple sections, a hero, and a slideshow to introduce your docs.',
+      'Fusion is a content manager and browser for Apple devices. It provides a unified interface to discover, organize, and browse media information from your configured sources.',
   },
   {
-    question: 'Can I swap the placeholders for real images?',
+    question: 'Does Fusion provide content?',
     answer:
-      'Yes. Replace the image blocks with your own screenshots or components while keeping the same layout and spacing.',
+      'No. Fusion is a media organizer. It does not provide, host, or distribute any content. Users connect their own extensions and manage their personal collections.',
   },
   {
-    question: 'Where does Fumadocs fit in?',
+    question: 'What platforms does Fusion support?',
     answer:
-      'Fumadocs provides the layout, MDX pipeline, and design system so you can focus on telling your lazy fox story.',
+      'Fusion runs natively on iPhone, iPad, Mac, and Apple TV. All platforms share the same features and sync seamlessly via iCloud.',
+  },
+  {
+    question: 'What are Extensions?',
+    answer:
+      'Extensions are user installed connectors that provide additional catalogs, metadata, or subtitle sources. You install, configure, and manage them yourself within Fusion\'s settings.',
+  },
+  {
+    question: 'How does iCloud sync work?',
+    answer:
+      'Fusion uses iCloud Key Value Storage to sync your layout, preferences, and collection data across devices signed into the same Apple ID. No separate account needed.',
+  },
+  {
+    question: 'Is my data private?',
+    answer:
+      'Fusion uses TMDB and other public APIs for metadata such as posters and descriptions. We do not collect, store, or track any personal user data. All your preferences and collections stay on your devices via iCloud.',
+  },
+  {
+    question: 'Can I use external apps?',
+    answer:
+      'Absolutely. Fusion supports handoff to your preferred media applications. Launch content in Infuse, VLC, or any compatible app directly from the interface.',
   },
 ];
 
@@ -136,30 +156,19 @@ export default function HomePage() {
           </div>
 
           <h1 className="text-4xl md:text-5xl font-semibold tracking-tight text-slate-50">
-            Fusion Lazy Fox Docs
+            Fusion
           </h1>
-          <p className="mt-3 text-base md:text-lg text-slate-200/90">
-            Quick brown fox powers delightful docs for every curious team.
-          </p>
-          <p className="mt-4 max-w-2xl text-sm md:text-base text-slate-200/80">
-            The quick brown fox keeps jumping over lazy documentation so you do
-            not have to. Build a calm, focused homepage that makes every
-            section feel intentional, friendly, and ready for your users.
+          <p className="mt-3 text-base md:text-lg text-slate-200/90 max-w-2xl">
+            The elegant content manager for Apple. Discover, organize, and browse your media collection across iPhone, iPad, Mac, and Apple TV.
           </p>
 
           <div className="mt-6">
-            <Link
-              href="#request-testflight"
+            <a
+              href="https://testflight.fusionapp.dev/"
               className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm transition hover:bg-slate-100"
             >
-              <span
-                aria-hidden="true"
-                className="text-lg leading-none text-black"
-              >
-
-              </span>
               <span>Request Beta Access</span>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -205,25 +214,18 @@ export default function HomePage() {
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-10">
           <div className="space-y-4 max-w-xl mx-auto text-center">
             <h2 className="text-2xl font-semibold tracking-tight">
-              Start testing with the lazy fox
+              Join the Beta
             </h2>
             <p className="text-sm md:text-base text-muted-foreground">
-              Give early readers a calm place to explore Fusion documentation,
-              collect feedback, and refine your story before you fully launch.
+              Be among the first to experience Fusion. Get early access and help shape the future of content management on Apple devices.
             </p>
             <div className="pt-2">
-              <Link
-                href="/docs"
+              <a
+                href="https://testflight.fusionapp.dev/"
                 className="inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black shadow-sm transition hover:bg-slate-100"
               >
-                <span
-                  aria-hidden="true"
-                  className="text-lg leading-none text-black"
-                >
-                  
-                </span>
                 <span>Request Beta Access</span>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -254,9 +256,9 @@ export default function HomePage() {
       <section className="space-y-6 pt-8 md:pt-10 pb-4">
         <div className="mx-auto w-full px-4 sm:px-6 lg:px-10">
           <div className="space-y-2 text-center">
-            <h2 className="text-2xl font-semibold tracking-tight">FAQ</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">Frequently Asked Questions</h2>
             <p className="text-sm md:text-base text-muted-foreground">
-              A few quick answers before your fox curls up and reads.
+              Everything you need to know before getting started.
             </p>
           </div>
 
@@ -286,12 +288,12 @@ export default function HomePage() {
         <div className="mx-auto flex w-full flex-col gap-4 px-4 text-xs text-muted-foreground sm:px-6 lg:px-10 md:flex-row md:items-center md:justify-between">
           <div className="space-y-1">
             <div className="text-sm font-semibold text-foreground">
-              Fusion Lazy Fox
+              Fusion
             </div>
             <p className="max-w-xs">
-              Lazy fox powered documentation
+              Discover. Organize. Browse.
               <br />
-              for curious teams everywhere
+              Across every Apple device.
             </p>
           </div>
           <div className="flex items-center gap-4">
