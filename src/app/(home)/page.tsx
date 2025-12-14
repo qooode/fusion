@@ -61,7 +61,7 @@ const featureGrid = [
   },
   {
     title: 'Extensible Architecture',
-    description: 'Your extensions, your choice. Add third party connectors for additional catalogs, subtitles, and metadata. Manage everything from one clean interface.',
+    description: 'Your addons, your choice. Add third party extensions for additional catalogs, subtitles, and metadata. Manage everything from one clean interface.',
   },
 ];
 
@@ -74,7 +74,7 @@ const faqs = [
   {
     question: 'Does Fusion provide content?',
     answer:
-      'No. Fusion is a media organizer. It does not provide, host, or distribute any content. Users connect their own extensions and manage their personal collections.',
+      'No. Fusion is a media organizer. It does not provide, host, or distribute any content. Users connect their own addons and manage their personal collections.',
   },
   {
     question: 'What platforms does Fusion support?',
@@ -82,9 +82,9 @@ const faqs = [
       'Fusion runs natively on iPhone, iPad, Mac, and Apple TV. All platforms share the same features and sync seamlessly via iCloud.',
   },
   {
-    question: 'What are Extensions?',
+    question: 'What are Addons?',
     answer:
-      'Extensions are manifest based connectors capable of providing catalogs, metadata, subtitles, and resource URLs. Fusion functions only as a client for user installed extensions. You are solely responsible for ensuring that any extensions you install comply with applicable laws and terms of service.',
+      'Addons (also called extensions or connectors) are manifest based components capable of providing catalogs, metadata, subtitles, and resource URLs. Fusion functions only as a client for user installed addons. You are solely responsible for ensuring that any addons you install comply with applicable laws and terms of service.',
   },
   {
     question: 'How does iCloud sync work?',
